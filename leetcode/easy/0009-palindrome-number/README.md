@@ -48,9 +48,9 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 7 ms (beats 64.25%)  
-**Memory:** 19.2 MB (beats 87.21%)  
-**Submitted:** 2026-10-01T06:42:37.669Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 19.2 MB (beats 55.49%)  
+**Submitted:** 2026-10-01T06:44:21.000Z  
 
 ```py
 class Solution:
