@@ -7,6 +7,7 @@ class Solution:
             for j in range(len(x)):
                 if x[j] not in list_str:
                     flag = False
+                    break 
             if flag:
                 cnt += 1
         
