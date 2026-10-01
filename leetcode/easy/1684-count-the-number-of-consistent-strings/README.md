@@ -50,9 +50,9 @@ Explanation: Strings "cc", "acd", "ac", and "d" are consistent.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 61 ms  
-**Memory:** 19.4 MB  
-**Submitted:** 2026-10-01T11:16:37.114Z  
+**Runtime:** 232 ms (beats 25.14%)  
+**Memory:** 21.1 MB (beats 25.14%)  
+**Submitted:** 2026-10-01T11:16:48.111Z  
 
 ```py
 class Solution:
