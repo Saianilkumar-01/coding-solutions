@@ -55,9 +55,9 @@ Output: 12
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 9.49%)  
-**Memory:** 19.4 MB (beats 26.21%)  
-**Submitted:** 2026-10-01T11:24:25.179Z  
+**Runtime:** 0 ms  
+**Memory:** 19.3 MB  
+**Submitted:** 2026-10-01T11:24:56.195Z  
 
 ```py
 class Solution:
@@ -69,10 +69,9 @@ class Solution:
 
             if num % 2 == 0:
                 num //= 2
-                cnt += 1
             else:
                 num -= 1
-                cnt += 1
+            cnt += 1
         return cnt
 ```
 
