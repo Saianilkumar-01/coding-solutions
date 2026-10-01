@@ -50,9 +50,9 @@ Explanation: Strings "cc", "acd", "ac", and "d" are consistent.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 254 ms (beats 6.44%)  
-**Memory:** 20.8 MB (beats 79.27%)  
-**Submitted:** 2026-10-01T11:15:48.322Z  
+**Runtime:** 61 ms  
+**Memory:** 19.4 MB  
+**Submitted:** 2026-10-01T11:16:37.114Z  
 
 ```py
 class Solution:
@@ -64,6 +64,7 @@ class Solution:
             for j in range(len(x)):
                 if x[j] not in list_str:
                     flag = False
+                    break 
             if flag:
                 cnt += 1
         
