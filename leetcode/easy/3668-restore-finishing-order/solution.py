@@ -1,13 +1,9 @@
 class Solution:
     def recoverOrder(self, order: List[int], friends: List[int]) -> List[int]:
-        i = 0
-        j = 0
+        friend = set(friends)
         res = []
-        while i < len(order):
-            j = 0
-            while j < len(friends):
-                if order[i] == friends[j]:
-                    res.append(order[i])
-                j += 1
-            i += 1
+
+        for x in order:
+            if x in friend:
+                res.append(x)
         return res
