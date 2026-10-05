@@ -1,9 +1,6 @@
 class Solution:
     def findMissingElements(self, nums: List[int]) -> List[int]:
-        hm = {}
-        for x in nums:
-            hm[x] = hm.get(x,0)+1
-        
+        hm = set(nums)
         i = min(nums)
         ans = []
         while i <= max(nums):
