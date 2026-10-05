@@ -1,14 +1,14 @@
-def search_insert_position(arr, n, k):
-    # Write your code here
-    l = 0
-    h = n - 1
-    while l <= h:
-        mid = (l + h) // 2
-        if arr[mid] == k:
-            return mid
-        elif arr[mid] < k:
-            l = mid+ 1
+def solve(nums, x):
+    low = 0
+    high = len(nums) - 1
+    ans = len(nums)
+    
+    while low <= high:
+        
+        mid = (low + high) // 2
+        if nums[mid] >= x:
+            ans = mid
+            high = mid - 1
         else:
-            h = mid - 1
-    else:
-        return l
+            low = mid + 1
+    return ans
