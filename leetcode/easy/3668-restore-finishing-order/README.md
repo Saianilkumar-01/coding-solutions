@@ -46,23 +46,19 @@ The finishing order is `[1, 4, 5, 3, 2]`. Therefore, the finishing order of your
 ## Solution
 
 **Language:** Python  
-**Runtime:** 7 ms (beats 5.31%)  
-**Memory:** 19.3 MB (beats 59.25%)  
-**Submitted:** 2026-10-05T11:23:44.410Z  
+**Runtime:** 3 ms (beats 34.10%)  
+**Memory:** 19.2 MB (beats 59.25%)  
+**Submitted:** 2026-10-05T11:26:16.456Z  
 
 ```py
 class Solution:
     def recoverOrder(self, order: List[int], friends: List[int]) -> List[int]:
-        i = 0
-        j = 0
+        friend = set(friends)
         res = []
-        while i < len(order):
-            j = 0
-            while j < len(friends):
-                if order[i] == friends[j]:
-                    res.append(order[i])
-                j += 1
-            i += 1
+
+        for x in order:
+            if x in friend:
+                res.append(x)
         return res
 ```
 
