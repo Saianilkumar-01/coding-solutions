@@ -45,12 +45,12 @@ Output
 
 ## Solution
 
-**Language:** Python  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T13:36:52.599Z  
+**Submitted:** 2026-10-05T13:39:57.966Z  
 
-```py
+```cpp
 def main():
     # Write your code here
     t = int(input())
