@@ -54,17 +54,14 @@ The smallest integer is 1 and the largest is 5, so the full range should be `[1,
 ## Solution
 
 **Language:** Python  
-**Runtime:** 11 ms (beats 7.18%)  
-**Memory:** 19.3 MB (beats 60.00%)  
-**Submitted:** 2026-10-05T11:46:47.013Z  
+**Runtime:** 14 ms (beats 7.18%)  
+**Memory:** 19.1 MB (beats 98.34%)  
+**Submitted:** 2026-10-05T11:48:12.485Z  
 
 ```py
 class Solution:
     def findMissingElements(self, nums: List[int]) -> List[int]:
-        hm = {}
-        for x in nums:
-            hm[x] = hm.get(x,0)+1
-        
+        hm = set(nums)
         i = min(nums)
         ans = []
         while i <= max(nums):
