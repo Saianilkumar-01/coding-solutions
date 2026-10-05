@@ -37,23 +37,18 @@ Output: 0
 ## Solution
 
 **Language:** Python  
-**Runtime:** 4 ms (beats 2.30%)  
-**Memory:** 19.3 MB (beats 55.79%)  
-**Submitted:** 2026-10-05T11:31:56.612Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 19.4 MB (beats 17.22%)  
+**Submitted:** 2026-10-05T11:33:26.208Z  
 
 ```py
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
 
-        i = 0
         sm = 0
-        while i < len(jewels):
-            j = 0
-            while j < len(stones):
-                if jewels[i] == stones[j]:
-                    sm += 1
-                j += 1
-            i += 1
+        for x in stones:
+            if x in jewels:
+                sm += 1
         return sm
 ```
 
