@@ -48,9 +48,9 @@ That is, the permutation difference between `s` and `t` is equal to `|0 - 1| + |
 ## Solution
 
 **Language:** Python  
-**Runtime:** 2 ms (beats 50.00%)  
-**Memory:** 19.3 MB (beats 17.84%)  
-**Submitted:** 2026-10-06T17:14:12.515Z  
+**Runtime:** 1 ms (beats 55.76%)  
+**Memory:** 19.4 MB (beats 17.84%)  
+**Submitted:** 2026-10-06T17:16:20.532Z  
 
 ```py
 class Solution:
@@ -58,13 +58,12 @@ class Solution:
         S = {}
         T = {}
         for i in range(len(s)):
-            S[s[i]] = S.get(s[i],0)+i
-        for j in range(len(t)):
-            T[t[j]] = T.get(t[j],0)+j
+            S[s[i]] = i
+            T[t[i]] = i
 
         sm = 0
-        for x in s:
-            sm += abs(T[x] - S[x])
+        for k,v in S.items():
+            sm += abs(v - T[k])
 
         return sm
 ```
