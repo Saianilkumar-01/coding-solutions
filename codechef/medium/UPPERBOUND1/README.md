@@ -70,12 +70,12 @@ The first element greater than `4` is `6` at index `4`.
 
 ## Solution
 
-**Language:** Python  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T17:33:48.536Z  
+**Submitted:** 2026-10-06T17:35:13.449Z  
 
-```py
+```cpp
 def upper_bound(nums, x):
     # write code here...
     
