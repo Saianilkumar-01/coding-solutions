@@ -3,12 +3,11 @@ class Solution:
         S = {}
         T = {}
         for i in range(len(s)):
-            S[s[i]] = S.get(s[i],0)+i
-        for j in range(len(t)):
-            T[t[j]] = T.get(t[j],0)+j
+            S[s[i]] = i
+            T[t[i]] = i
 
         sm = 0
-        for x in s:
-            sm += abs(T[x] - S[x])
+        for k,v in S.items():
+            sm += abs(v - T[k])
 
         return sm
