@@ -50,19 +50,23 @@ Output: [0,0,0,0]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 202 ms (beats 5.01%)  
-**Memory:** 19.3 MB (beats 62.61%)  
-**Submitted:** 2026-10-06T17:22:12.135Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 19.1 MB (beats 90.27%)  
+**Submitted:** 2026-10-06T17:30:04.588Z  
 
 ```py
 class Solution:
     def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
-        ans = [0]*len(nums)
+        sorted_nums = sorted(nums)
+        cnt = {}
 
-        for i in range(len(nums)):
-            for j in range(len(nums)):
-                if nums[j] < nums[i] and i != j:
-                    ans[i] += 1
+        for i in range(len(sorted_nums)):
+            if sorted_nums[i] not in cnt:
+                cnt[sorted_nums[i]] = i
+        
+        ans = []
+        for x in nums:
+            ans.append(cnt[x])
         return ans
 ```
 
