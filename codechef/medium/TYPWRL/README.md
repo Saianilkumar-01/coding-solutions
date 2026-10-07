@@ -59,12 +59,12 @@ abcdefghijklmnopqrstuvwxyz
 
 ## Solution
 
-**Language:** Python  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T14:37:25.036Z  
+**Submitted:** 2026-10-07T14:39:44.144Z  
 
-```py
+```cpp
 # cook your dish here
 
 ```
