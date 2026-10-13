@@ -48,15 +48,16 @@ Output: 12
 ## Solution
 
 **Language:** Python  
-**Runtime:** 4 ms (beats 19.67%)  
-**Memory:** 19.3 MB (beats 68.55%)  
-**Submitted:** 2026-10-13T15:56:49.196Z  
+**Runtime:** 0 ms  
+**Memory:** 19.1 MB  
+**Submitted:** 2026-10-13T15:57:24.515Z  
 
 ```py
 class Solution:
     def maxProduct(self, nums: list[int]) -> int:
-        max1 = 0
-        max2 = 0
+        max1 = float("-inf")
+
+        max2 = float("-inf")
 
         for x in nums:
             if x > max1:
