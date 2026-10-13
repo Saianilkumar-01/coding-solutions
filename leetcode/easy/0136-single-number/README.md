@@ -39,18 +39,21 @@ You must implement a solution with a linear runtime complexity and use only co
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 21 MB (beats 70.93%)  
-**Submitted:** 2026-10-13T15:58:44.806Z  
+**Runtime:** 9 ms (beats 17.89%)  
+**Memory:** 21.7 MB (beats 10.96%)  
+**Submitted:** 2026-10-13T16:00:29.696Z  
 
 ```py
 class Solution:
     def singleNumber(self, nums: list[int]) -> int:
-        ans = 0
+        hm = {}
 
         for x in nums:
-            ans = ans ^ x
-        return ans
+            hm[x] = hm.get(x,0)+1
+
+        for x in nums:
+            if hm[x] == 1:
+                return x
 ```
 
 ---
