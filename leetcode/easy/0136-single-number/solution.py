@@ -1,7 +1,10 @@
 class Solution:
     def singleNumber(self, nums: list[int]) -> int:
-        ans = 0
+        hm = {}
 
         for x in nums:
-            ans = ans ^ x
-        return ans
+            hm[x] = hm.get(x,0)+1
+
+        for x in nums:
+            if hm[x] == 1:
+                return x
