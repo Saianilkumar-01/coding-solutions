@@ -1,8 +1,8 @@
 class Solution:
     def getSecondLargest(self, arr):
         # code here
-        largest = -1
-        second_largest = -1
+        largest = float('-inf')
+        second_largest = float('-inf')
         
         for x in arr:
             
@@ -11,5 +11,5 @@ class Solution:
                 largest = x
             elif x > second_largest and largest != x:
                 second_largest = x
-        return second_largest
+        return second_largest if second_largest != float('-inf') else -1
                 
