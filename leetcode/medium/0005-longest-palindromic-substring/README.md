@@ -35,24 +35,38 @@ Output: "bb"
 ## Solution
 
 **Language:** Python  
-**Runtime:** 8744 ms (beats 5.01%)  
-**Memory:** 19.2 MB (beats 88.69%)  
-**Submitted:** 2026-10-27T04:33:08.408Z  
+**Runtime:** 232 ms (beats 82.26%)  
+**Memory:** 19.2 MB (beats 66.58%)  
+**Submitted:** 2026-10-27T04:52:59.547Z  
 
 ```py
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         
-        res = ""
+        max_length = 1
+        start = 0
 
         for i in range(len(s)):
-            for j in range(i,len(s)):
-                ch = s[i:j+1]
-                if ch == ch[::-1]:
-                    if len(res) < len(ch):
-                        res = ch
+            p1 = i
+            p2 = i
 
-        return res
+            while p1 >= 0 and p2 < len(s) and s[p1] == s[p2]:
+                p1 -= 1
+                p2 += 1
+            length = p2 - p1 - 1
+            if length > max_length:
+                max_length =  length
+                start = p1 + 1
+            p1 = i
+            p2 = i + 1
+            while p1 >= 0 and p2 < len(s) and s[p1] == s[p2]:
+                p1 -= 1
+                p2 += 1
+            length = p2 - p1 -1
+            if max_length < length:
+                max_length = length
+                start = p1 + 1
+        return s[start:start+max_length]
 ```
 
 ---
