@@ -51,9 +51,9 @@ rotate 2 steps to the right: [3,99,-1,-100]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 145 ms (beats 25.14%)  
-**Memory:** 35.3 MB (beats 40.00%)  
-**Submitted:** 2026-11-15T12:36:48.436Z  
+**Runtime:** 27 ms (beats 87.37%)  
+**Memory:** 35.1 MB (beats 74.58%)  
+**Submitted:** 2026-11-15T12:40:22.366Z  
 
 ```py
 class Solution:
@@ -61,36 +61,11 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-
-        if k <= -1:
+        n = len(nums)
+        if n == 0:
             return -1
-
-        #revesre whole array
-        i = 0 
-        j = len(nums)-1
-        while i < j:
-            nums[i],nums[j] = nums[j],nums[i]
-            i += 1
-            j -= 1
-        k = k % len(nums)
-        
-        #revesre upto kth index
-        i = 0
-        j = k - 1
-        while i < j:
-            nums[i],nums[j] = nums[j],nums[i]
-            i += 1
-            j -= 1
-        
-        #reverse from kth index
-        i = k
-        j = len(nums)-1
-        while i < j:
-            nums[i] , nums[j] = nums[j] , nums[i]
-            i += 1
-            j -= 1
-
-        return nums
+        k = k % n
+        nums[:] = nums[-k:] + nums[:-k]
 ```
 
 ---
